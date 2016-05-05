@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>belcurv</title>
+        
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+    </head>
+    
+    <body ng-controller="portfolioController">
+        
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">A PORTFOLIO BY belcurv</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="#top">TOP</a>
+                        <a class="mdl-navigation__link" href="#works">WORKS</a>
+                        <a class="mdl-navigation__link" href="#contact">CONTACT</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Navigation</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#top">TOP</a>
+                    <a class="mdl-navigation__link" href="#works">WORKS</a>
+                    <a class="mdl-navigation__link" href="#contact">CONTACT</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    
+                    <!-- INTTO SECTION -->
+                    <div class="mdl-grid">
+                        <h1 id="top">Introduction</h1>
+
+                        <p>YOLO photo booth pitchfork sartorial, master cleanse craft beer listicle. Lumbersexual 8-bit farm-to-table, salvia semiotics swag raw denim locavore food truck photo booth gastropub. Keffiyeh mumblecore cliche hashtag bicycle rights, poutine freegan selfies kickstarter narwhal. Tumblr +1 etsy hammock, scenester pour-over drinking vinegar man bun portland cardigan meditation mumblecore yr try-hard. Kinfolk hella etsy, mlkshk shabby chic craft beer keffiyeh XOXO blue bottle everyday carry. Letterpress leggings keffiyeh, next level synth +1 put a bird on it readymade flexitarian. Mlkshk put a bird on it skateboard austin, wayfarers blog bespoke.</p>
+
+                        <p>Chia shoreditch typewriter messenger bag sriracha plaid, listicle thundercats pitchfork slow-carb chillwave. Church-key semiotics wayfarers banh mi. Mumblecore yr bicycle rights chillwave austin twee tacos viral 90's. Blog vice 3 wolf moon, freegan swag austin semiotics. Lomo 3 wolf moon bespoke gluten-free flexitarian lumbersexual tattooed cornhole, slow-carb poutine celiac godard gastropub chillwave offal. Flannel leggings kickstarter hella. PBR&B tote bag street art, health goth vice distillery next level blog paleo taxidermy synth waistcoat fixie mlkshk.</p>
+
+                        <p>Godard bespoke fingerstache, church-key hella everyday carry health goth knausgaard beard aesthetic vegan fixie. Kombucha lo-fi tumblr ennui try-hard. Vice cold-pressed pug fashion axe chambray, next level jean shorts cornhole schlitz migas. Readymade pug franzen portland drinking vinegar four dollar toast. Man braid beard portland yr DIY vegan. Pabst small batch hashtag, lumbersexual keffiyeh lomo ennui street art. Tousled cronut etsy flexitarian art party vice mumblecore, YOLO flannel.</p>
+
+                        <p>Ethical sriracha venmo before they sold out. Sriracha polaroid gentrify letterpress celiac. Post-ironic offal flannel next level fap knausgaard. Vegan pabst tacos occupy narwhal. Butcher paleo pitchfork tumblr, jean shorts selvage mustache tofu scenester etsy franzen narwhal aesthetic. Schlitz echo park fingerstache gluten-free shoreditch, polaroid retro brooklyn tumblr listicle. Hashtag vinyl letterpress seitan helvetica, biodiesel farm-to-table street art.</p>
+                    </div>
+
+                    <!-- WORKS SECTION -->
+                    <h1 id="works">Works</h1>
+                    
+                    <div class="mdl-grid">
+                    
+                        <div ng-repeat="work in works" class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
+                            <div class="mdl-card__title" style="background: url('{{work.imageUrl}}') center / cover">
+                                <h2 class="mdl-card__title-text">{{work.title}}</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                {{work.description}}
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!-- CONTACT SECTION -->
+                    <h1 id="contact">Contact</h1>
+                    
+
+                </div>
+            </main>
+            </div>
+        
+        <!-- scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <script src="js/app.js"></script>
+    
+    </body>
+</html>
