@@ -1,3 +1,7 @@
+body {
+    background-color: #ebebeb;
+}
+
 p {
     font-size: 16px;
 }
@@ -23,4 +27,12 @@ p {
 
 .centered {
     margin-left: 38%;
+}
+
+.padme {
+    margin-bottom: 30px;
+}
+
+.whitebkg {
+    background-color: white;
 }

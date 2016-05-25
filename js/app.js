@@ -67,7 +67,7 @@
                     contactUrl  : "https://www.facebook.com"
                 },
                 {
-                    contactDesc : "Quantum Entanglement",
+                    contactDesc : "Entanglement",
                     contactIcon : "gesture",
                     contactUrl  : "https://en.wikipedia.org/wiki/Quantum_entanglement"
                 }

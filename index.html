@@ -64,8 +64,8 @@
                     <h4 id="works">SELECTED WORKS</h4>
                 </div>
                 
-                <div ng-repeat="work in works" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-shadow--4dp">
-                    <div class="mdl-card__title  mdl-card--border" style="background: url('{{work.imageUrl}}') center / cover">
+                <div ng-repeat="work in works" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-shadow--4dp padme whitebkg">
+                    <div class="mdl-card__title mdl-card--border" style="background: url('{{work.imageUrl}}') center / cover">
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h2 class="mdl-card__title-text">{{work.title | uppercase}}</h2>
@@ -89,7 +89,7 @@
                     <h4 id="contact">CONTACT</h4>
                 </div>
                 
-                <div ng-repeat="contact in contacts" class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet center">
+                <div ng-repeat="contact in contacts" class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone center padme">
                     <a id="{{contact.contactDesc}}" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored centered" href="{{contact.contactUrl}}" target="_blank">
                         <i class="material-icons">{{contact.contactIcon}}</i>
                     </a>
