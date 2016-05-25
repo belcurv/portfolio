@@ -7,9 +7,11 @@
     <title>belcurv</title>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />
+<!--    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css" type="text/css" />-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-red.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 
 </head>
 
@@ -19,7 +21,7 @@
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">A PORTFOLIO BY belcurv</span>
+                <span class="mdl-layout-title">A BELCURV PORTFOLIO</span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
@@ -31,7 +33,7 @@
             </div>
         </header>
         <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Navigation</span>
+            <span class="mdl-layout-title">NAVIGATION</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="#top">TOP</a>
                 <a class="mdl-navigation__link" href="#works">WORKS</a>
@@ -59,7 +61,7 @@
 
                 <!-- WORKS SECTION -->
                 <div class="mdl-cell mdl-cell--12-col">
-                    <h4 id="works">Works</h4>
+                    <h4 id="works">SELECTED WORKS</h4>
                 </div>
                 
                 <div ng-repeat="work in works" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-shadow--4dp">
@@ -84,41 +86,27 @@
                 
                 <!-- CONTACT SECTION -->
                 <div class="mdl-cell mdl-cell--12-col">
-                    <h4 id="contact">Contact</h4>
+                    <h4 id="contact">CONTACT</h4>
                 </div>
                 
-                <div class="mdl-cell--2-offset mdl-cell mdl-cell--2-col center">
-                    <a class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" href="https://github.com/belcurv">
-                        <i class="material-icons">cake</i>
+                <div ng-repeat="contact in contacts" class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet center">
+                    <a id="{{contact.contactDesc}}" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored centered" href="{{contact.contactUrl}}" target="_blank">
+                        <i class="material-icons">{{contact.contactIcon}}</i>
                     </a>
+                    <div class="mdl-tooltip mdl-tooltip--top" for="{{contact.contactDesc}}">
+                        {{contact.contactDesc}}
+                    </div>
                 </div>
-                <div class="mdl-cell mdl-cell--2-col">
-                    <a class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored center" href="https://github.com/belcurv">
-                        <i class="material-icons">whatshot</i>
-                    </a>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col">
-                    <a class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored center" href="https://github.com/belcurv">
-                        <i class="material-icons">child_friendly</i>
-                    </a>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col">
-                    <a class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored center" href="https://github.com/belcurv">
-                        <i class="material-icons">gesture</i>
-                    </a>
-                </div>
+
             </div>
             
 
             <!-- FOOTER -->
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">A belcurv portfolio:</div>
+                    <div class="mdl-logo">&copy 2016 BELCURV</div>
                     <ul class="mdl-mini-footer__link-list">
-                        <li><a href="https://github.com/belcurv">Github</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Quantum Entanglement</a></li>
+                        <li ng-repeat="contact in contacts"><a href="{{contact.contactUrl}}">{{contact.contactDesc}}</a></li>
                     </ul>
                 </div>
             </footer>

@@ -49,6 +49,30 @@
                     githubUrl: "https://github.com/belcurv/basic_ejs"
                 }
             ];
+            
+            $scope.contacts = [
+                {
+                    contactDesc : "Github",
+                    contactIcon : "cake",
+                    contactUrl  : "https://github.com/belcurv"
+                },
+                {
+                    contactDesc : "Twitter",
+                    contactIcon : "whatshot",
+                    contactUrl  : "https://twitter.com/"
+                },
+                {
+                    contactDesc : "Facebook",
+                    contactIcon : "child_friendly",
+                    contactUrl  : "https://www.facebook.com"
+                },
+                {
+                    contactDesc : "Quantum Entanglement",
+                    contactIcon : "gesture",
+                    contactUrl  : "https://en.wikipedia.org/wiki/Quantum_entanglement"
+                }
+            ];
+            
         }]);
     
 })();

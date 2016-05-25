@@ -20,3 +20,7 @@ p {
 .mdl-card__supporting-text {
     width: auto;
 }
+
+.centered {
+    margin-left: 38%;
+}
