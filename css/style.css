@@ -25,8 +25,13 @@ p {
     width: auto;
 }
 
+.work-img {
+    background-position: center;
+    background-size: cover;
+}
+
 .centered {
-    margin-left: 38%;
+    margin-left: 30%;
 }
 
 .padme {
@@ -35,4 +40,13 @@ p {
 
 .whitebkg {
     background-color: white;
+}
+
+.fa {
+    font-size: 1.2em;
+}
+
+/* fix for blurry tooltip text */
+.mdl-tooltip {
+    will-change: unset;
 }

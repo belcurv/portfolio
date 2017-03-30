@@ -88,26 +88,60 @@
             $scope.contacts = [
                 {
                     contactDesc : "Github",
-                    contactIcon : "cake",
+                    contactIcon : "fa-github",
                     contactUrl  : "https://github.com/belcurv"
                 },
                 {
                     contactDesc : "Twitter",
-                    contactIcon : "whatshot",
-                    contactUrl  : "https://twitter.com/"
+                    contactIcon : "fa-twitter",
+                    contactUrl  : "https://twitter.com/belcurv"
                 },
                 {
-                    contactDesc : "Facebook",
-                    contactIcon : "child_friendly",
-                    contactUrl  : "https://www.facebook.com"
+                    contactDesc : "LinkedIn",
+                    contactIcon : "fa-linkedin",
+                    contactUrl  : "https://www.linkedin.com/in/jay-schwane"
                 },
                 {
-                    contactDesc : "Entanglement",
-                    contactIcon : "gesture",
-                    contactUrl  : "https://en.wikipedia.org/wiki/Quantum_entanglement"
+                    contactDesc : "CodePen",
+                    contactIcon : "fa-codepen",
+                    contactUrl  : "http://codepen.io/belcurv/"
                 }
             ];
             
-        }]);
+        }])
+    
+        /* custom directive for each work's card */
+        .directive("workCard", function () {
+        
+            return {
+                restrict: "EA",
+                scope: {
+                    work: "="
+                },  
+                templateUrl: "templates/work-card.tpl.html"
+            };
+
+        })
+        
+        .directive("workImg", function () {
+            return function(scope, el, attrs){
+                el.css({
+                    "background-image" : "url(" + attrs.workImg + ")"
+                });
+            };
+        })
+    
+        /* custom directive for each contact button */
+        .directive("contactBtn", function () {
+        
+            return {
+                restrict: "EA",
+                scope: {
+                    contact: "="
+                },  
+                templateUrl: "templates/contact-btn.tpl.html"
+            };
+
+        });
     
 })();
