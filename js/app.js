@@ -34,6 +34,13 @@
                     demoUrl: "http://belcurv.com/pfapp/"
                 },
                 {
+                    imageUrl: "http://belcurv.com/portfolio/assets/portfolio_csv-parse.png",
+                    title: "CSV Parser",
+                    description: "Angular app that reads a remote CSV file via XHR, parses it using Papaparse, formats and outputs the result as a table and raw JSON. A HTML5 input/range slider is used to filter the results by specific dates. Tech used: Angular 1.x, promises, Material Design Lite.",
+                    githubUrl: "https://github.com/belcurv/csv_parse",
+                    demoUrl: "http://belcurv.com/csv_parse/"
+                },
+                {
                     imageUrl: "http://belcurv.com/portfolio/assets/portfolio_fibonacci.png",
                     title: "Fibonacci Tribute",
                     description: "A dynamic Angular app that calculates the Fibonacci sequence and builds the famous spiral as the user manipulates the range slider. Tech used: Angular 1.x, SVG.",
@@ -43,9 +50,16 @@
                 {
                     imageUrl: "http://belcurv.com/portfolio/assets/portfolio_album_app_md.png",
                     title: "Album Aggregator",
-                    description: "Angular 1.x single page application served by Node / Express. The SPA consumes an API and includes basic CRUD functions for maintaining a music collection. Tech used: Angular 1.x, Node/Express, Mongo/Mongoose, Material Design.",
+                    description: "A single page application served by Node / Express. The SPA consumes an API and includes basic CRUD functions for maintaining a music collection. Tech used: Angular 1.x, Node/Express, Mongo/Mongoose, Material Design.",
                     githubUrl: "https://github.com/belcurv/album_app_md",
                     demoUrl: "http://jrs-album-app-md.herokuapp.com/"
+                },
+                {
+                    imageUrl: "http://belcurv.com/portfolio/assets/portfolio_twitch.png",
+                    title: "Twitch Stream Status",
+                    description: "A Twitch 'who's streaming' dashboard. Tech used: Angular 1.x, promises, ajax.",
+                    githubUrl: "https://github.com/belcurv/fcc/tree/master/front-end_projects_intermediate/twitch_whos_streaming",
+                    demoUrl: "http://belcurv.com/twitch/"
                 },
                 {
                     imageUrl: "http://belcurv.com/portfolio/assets/portfolio_calculator.png",
@@ -60,13 +74,6 @@
                     description: "A clone of the classic Simon memory game. Tech used: modular patterns, jQuery, ES6, regex",
                     githubUrl: "https://github.com/belcurv/fcc-simon",
                     demoUrl: "https://belcurv.github.io/fcc-simon/"
-                },
-                {
-                    imageUrl: "http://belcurv.com/portfolio/assets/portfolio_csv-parse.png",
-                    title: "CSV Parser",
-                    description: "Angular app that reads a remote CSV file via XHR, parses it using Papaparse, formats and outputs the result as a table and raw JSON. A HTML5 input/range slider is used to filter the results by specific dates. Tech used: Angular 1.x, promises, Material Design Lite.",
-                    githubUrl: "https://github.com/belcurv/csv_parse",
-                    demoUrl: "http://belcurv.com/csv_parse/"
                 },
                 {
                     imageUrl: "http://belcurv.com/portfolio/assets/portfolio_fishtank.png",
