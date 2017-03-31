@@ -62,11 +62,22 @@
                 </div>
 
                 <!-- WORKS SECTION -->
-                <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-cell mdl-cell--4-col">
                     <h4 id="works">SELECTED WORKS</h4>
                 </div>
+                
+                <div class="mdl-cell mdl-cell--4-offset-desktop mdl-cell--4-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input"
+                               type="text" id="works-filter"
+                               ng-model="skills">
+                        <label class="mdl-textfield__label" for="works-filter">Filter skills</label>
+                    </div>
+                </div>
+                
+                
 
-                <div ng-repeat="w in works" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-shadow--4dp padme whitebkg">
+                <div ng-repeat="w in works | filter:skills" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-shadow--4dp padme whitebkg">
                     <work-card work="w"></work-card>
                 </div>
 
