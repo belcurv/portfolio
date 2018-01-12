@@ -2,16 +2,37 @@
 /* globals angular */
 
 (function () {
-    
+
     'use strict';
-    
+
     angular
-        
+
         .module('portfolioApp', [])
-    
+
         .controller('portfolioController', ['$scope', function ($scope) {
-        
+
             $scope.works = [
+                {
+                    imageUrl: "https://belcurv.com/portfolio/assets/portfolio_co-ment.png",
+                    title: "co/ment",
+                    description: "A full-stack mentor/mentee match-making application. Tech used: React, Redux, Node, Express, JWT, Mongo, Mongoose, ES6, promises, REST, SVG, local storage.",
+                    githubUrl: "https://github.com/ursa-majors/co-ment",
+                    demoUrl: "https://co-ment.glitch.me/"
+                },
+                {
+                    imageUrl: "https://belcurv.com/portfolio/assets/portfolio_co-ment-admin-dash.png",
+                    title: "co/ment admin dashboard",
+                    description: "A full-stack administrative dashboard for co/ment. Tech used: Vue, Vuex, Node, Express, JWT, Mongo, Mongoose, ES6, promises, REST, local storage.",
+                    githubUrl: "https://github.com/ursa-majors/co-ment-admin-dash",
+                    demoUrl: "https://belcurv.com/portfolio/assets/portfolio_co-ment-admin-dash.png"
+                },
+                {
+                    imageUrl: "https://belcurv.com/portfolio/assets/portfolio_whobot-animated.gif",
+                    title: "whobot",
+                    description: "A Slack integration that stores & retrieves team member skills, and displays some skills stats for your team. Tech used: Slack API, promises, Node, Express, MongoDB, Mongoose.",
+                    githubUrl: "https://github.com/belcurv/whobot",
+                    demoUrl: "https://belcurv.github.io/whobot-landing/"
+                },
                 {
                     imageUrl: "https://belcurv.com/portfolio/assets/portfolio_dev-dash.jpg",
                     title: "dev-dash",
@@ -82,9 +103,9 @@
                     githubUrl: "https://github.com/belcurv/fish-tank",
                     demoUrl: "https://belcurv.com/portfolio/assets/fish_tank/fishtank.html"
                 }
-                
+
             ];
-            
+
             $scope.contacts = [
                 {
                     contactDesc : "Github",
@@ -107,22 +128,22 @@
                     contactUrl  : "http://codepen.io/belcurv/"
                 }
             ];
-            
+
         }])
-    
+
         /* custom directive for each work's card */
         .directive("workCard", function () {
-        
+
             return {
                 restrict: "EA",
                 scope: {
                     work: "="
-                },  
+                },
                 templateUrl: "templates/work-card.tpl.html"
             };
 
         })
-        
+
         .directive("workImg", function () {
             return function(scope, el, attrs){
                 el.css({
@@ -130,18 +151,18 @@
                 });
             };
         })
-    
+
         /* custom directive for each contact button */
         .directive("contactBtn", function () {
-        
+
             return {
                 restrict: "EA",
                 scope: {
                     contact: "="
-                },  
+                },
                 templateUrl: "templates/contact-btn.tpl.html"
             };
 
         });
-    
+
 })();
